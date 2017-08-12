@@ -107,7 +107,11 @@ open class MOLH {
             assert(maximumLocalizableTag <= -1, "Tag should be less than or equal -1 , since 0 will corrupt UIKit-Made UIs e.g. UIAlertView/Share...")
         }
     }
-   
+    /**
+     @description
+     * set special keywords "Keys"  that handled by external frameworks to be localized locally
+     */
+    public var specialKeyWords: [String] = []
     /**
      Activate Localization Helper
      
@@ -174,19 +178,31 @@ extension Bundle {
         // check if its the main bundle then if the bundle of the current language is available
         // then try without locale
         // if not go back to base
-        if self == Bundle.main {
+        
+        let translate =  { (tableName: String?) -> String in
             let currentLanguage = MOLHLanguage.currentLocaleIdentifier() // with locale
             let languageWithoutLocale = MOLHLanguage.currentAppleLanguage() // without locale
             var bundle = Bundle();
+            // normal case where the lang with locale working
             if let _path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj") {
                 bundle = Bundle(path: _path)!
-            } else if let _path = Bundle.main.path(forResource: languageWithoutLocale, ofType: "lproj") {
+            } // en case when its working wihout locale
+            else if let _path = Bundle.main.path(forResource: languageWithoutLocale, ofType: "lproj") {
                 bundle = Bundle(path: _path)!
-            } else if let _path = Bundle.main.path(forResource: MOLH.shared.fallbackLocale, ofType: "lproj") {
+            } // current locale not exist , so we fallback
+            else if let _path = Bundle.main.path(forResource: MOLH.shared.fallbackLocale, ofType: "lproj") {
                 bundle = Bundle(path: _path)!
             }
             return (bundle.specialLocalizedStringForKey(key, value: value, table: tableName))
-        } else {
+        }
+        // normal case
+        if self == Bundle.main {
+            return translate(tableName)
+        } // case when the external frameworks has no locale proberty so you have to handle switching yourself
+        else if MOLH.shared.specialKeyWords.contains(key) {
+            return translate("Localizable")
+        } // let the bundle handle the locale
+        else {
             return (self.specialLocalizedStringForKey(key, value: value, table: tableName))
         }
     }

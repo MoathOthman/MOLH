@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         MOLH.shared.activate(true)
+        MOLH.shared.specialKeyWords = ["Cancel","Done"]
         return true
     }
     
