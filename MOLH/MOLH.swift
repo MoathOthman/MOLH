@@ -19,9 +19,6 @@ protocol TextAlignmented: NSObjectProtocol {
 
 extension LayoutSwizzlable where Self: TextAlignmented & Taggable {
     func handleSwitching() {
-        if self.isKind(of: NSClassFromString("UITextFieldLabel")!) {
-            return // handle special case with uitextfields
-        }
         if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
             if UIApplication.isRTL()  {
                 if self.textAlignment == .right { return }
@@ -306,6 +303,11 @@ extension UIControl {
 extension UITextField: TextViewType {
     public override func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
+        for subview in self.subviews {
+            if let label = subview as? UILabel {
+                label.tag = self.tag
+            }
+        }
         handleSwitching()
     }
 }
@@ -368,6 +370,11 @@ open class MOLHTextView: UITextView {
 open class MOLHTextField: UITextField {
     override open func layoutSubviews() {
         super.layoutSubviews()
+        for subview in self.subviews {
+            if let label = subview as? UILabel {
+                label.tag = self.tag
+            }
+        }
         handleSwitching()
     }
 }
