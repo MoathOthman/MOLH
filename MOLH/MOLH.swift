@@ -3,6 +3,7 @@
 
 import Foundation
 import UIKit
+
 let viewkey = UnsafePointer<Any>(bitPattern: 64)
 
 protocol LayoutSwizzlable: NSObjectProtocol {
@@ -20,7 +21,7 @@ protocol TextAlignmented: NSObjectProtocol {
 extension LayoutSwizzlable where Self: TextAlignmented & Taggable {
     func handleSwitching() {
         if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
-            if UIApplication.isRTL()  {
+            if MOLHLanguage.isRTLLanguage()  {
                 if self.textAlignment == .right { return }
                 self.textAlignment = .right
             } else {
@@ -30,21 +31,18 @@ extension LayoutSwizzlable where Self: TextAlignmented & Taggable {
         }
     }
 }
+
 /// the type of text view , field , label
 typealias TextViewType = Taggable & LayoutSwizzlable & TextAlignmented
+
 /// Localize function
 public protocol MOLHLocalizable {
     func localize()
 }
+
 /// reset bundles
 public protocol MOLHResetable {
     func reset()
-}
-
-public extension UIApplication {
-    public class func isRTL() -> Bool {
-        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
-    }
 }
 
 open class MOLHViewController : UIViewController {
@@ -119,8 +117,7 @@ open class MOLH {
     open func activate(_ swizzleExtensions: Bool = false) {
         //invitable swizzlings first for the localzation itself (bundle switch) and the other for the direction (not needed if you support ios 9 and up)
         swizzle(class: Bundle.self, sel: #selector(Bundle.localizedString(forKey:value:table:)), override: #selector(Bundle.specialLocalizedStringForKey(_:value:table:)))
-        swizzle(class:UIApplication.self, sel: #selector(getter: UIApplication.userInterfaceLayoutDirection), override: #selector(getter: UIApplication.cstm_userInterfaceLayoutDirection))
-        
+
         if swizzleExtensions {
             swizzle(class:UIViewController.self, sel: #selector(UIViewController.viewDidLayoutSubviews), override: #selector(UIViewController.mirroringviewDidLoad))
             swizzle(class:UIControl.self, sel: #selector(UIControl.awakeFromNib), override: #selector(UIControl.cstmlayoutSubviews))
@@ -154,18 +151,6 @@ open class MOLH {
             }
             UIView.transition(with: ((delegate.window)!)!, duration: 0.5, options: transition, animations: {}) { (f) in
             }
-        }
-    }
-}
-
-extension UIApplication {
-    var cstm_userInterfaceLayoutDirection : UIUserInterfaceLayoutDirection {
-        get {
-            var direction = UIUserInterfaceLayoutDirection.leftToRight
-            if MOLHLanguage.isRTLLanguage() {
-                direction = .rightToLeft
-            }
-            return direction
         }
     }
 }
@@ -215,7 +200,7 @@ extension UIImage {
     }
     
     public func flipIfNeeded() -> UIImage? {
-        if MOLHLanguage.isRTL() {
+        if MOLHLanguage.isRTLLanguage() {
             return self.flippedImage()
         }
         return self
@@ -285,7 +270,7 @@ extension UIViewController {
 extension UIControl {
     internal func handleSwitching() {
         if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
-            if UIApplication.isRTL()  {
+            if MOLHLanguage.isRTLLanguage()  {
                 if self.contentHorizontalAlignment == .right { return }
                 self.contentHorizontalAlignment = .right
             } else {
@@ -308,6 +293,7 @@ extension UITextField: TextViewType {
                 label.tag = self.tag
             }
         }
+         
         handleSwitching()
     }
 }

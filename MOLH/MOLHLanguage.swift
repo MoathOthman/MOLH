@@ -31,7 +31,7 @@ open class MOLHLanguage {
         let userdef = UserDefaults.standard
         let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
         let current = langArray.firstObject as! String
-        let currentWithoutLocale = current.substring(to: current.characters.index(current.startIndex, offsetBy: 2))
+        let currentWithoutLocale = current.substring(to: current.index(current.startIndex, offsetBy: 2))
         return currentWithoutLocale
     }
     
@@ -83,8 +83,9 @@ open class MOLHLanguage {
 
      @return boolean
      */
+    @available(*, deprecated, message: "Use isRTLLanguage")
     public static func isRTL() -> Bool {
-        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+        return isRTLLanguage()
     }
     
     /**
