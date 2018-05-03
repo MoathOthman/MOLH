@@ -88,10 +88,10 @@ open class MOLH {
     
     /// Prevent MOLH()
     fileprivate init() {}
-   
+    
     /// shared Instance , MOLH should be accessed through this shared
     public static let shared = Shared.shared
-   
+    
     /**
      @description
      * set the maximum tag where a UIView subclass Deemed Localizable
@@ -117,7 +117,7 @@ open class MOLH {
     open func activate(_ swizzleExtensions: Bool = false) {
         //invitable swizzlings first for the localzation itself (bundle switch) and the other for the direction (not needed if you support ios 9 and up)
         swizzle(class: Bundle.self, sel: #selector(Bundle.localizedString(forKey:value:table:)), override: #selector(Bundle.specialLocalizedStringForKey(_:value:table:)))
-
+        
         if swizzleExtensions {
             swizzle(class:UIViewController.self, sel: #selector(UIViewController.viewDidLayoutSubviews), override: #selector(UIViewController.mirroringviewDidLoad))
             swizzle(class:UIControl.self, sel: #selector(UIControl.awakeFromNib), override: #selector(UIControl.cstmlayoutSubviews))
@@ -136,7 +136,7 @@ open class MOLH {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
-   
+    
     /**
      reset app which will perform transition and call reset on appdelegate if it's MOLHResetable
      */
@@ -235,19 +235,16 @@ extension UIViewController {
                 // Flip UIImageView
                 if subView.isKind(of: UIImageView.self)    {
                     let toRightArrow = subView as! UIImageView
-                    if let _img = toRightArrow.image {
-                        toRightArrow.image = UIImage(cgImage: _img.cgImage!, scale:_img.scale , orientation: UIImageOrientation.upMirrored)
-                    }
+                    toRightArrow.image = toRightArrow.image?.flipIfNeeded()
                 }
                 // Flip UISlider thumb image
                 if subView.isKind(of: UISlider.self) {
                     let toRightArrow = subView as! UISlider
-                    if var _img = toRightArrow.thumbImage(for: UIControlState()) {
-                        _img = UIImage(cgImage: _img.cgImage!, scale:_img.scale , orientation: UIImageOrientation.upMirrored)
-                        toRightArrow.setThumbImage(_img, for: UIControlState())
-                        toRightArrow.setThumbImage(_img, for: .selected)
-                        toRightArrow.setThumbImage(_img, for: .highlighted)
-                    }
+                    let _img = toRightArrow.thumbImage(for: UIControlState())
+                    let flipped = _img?.flipIfNeeded()
+                    toRightArrow.setThumbImage(flipped, for: UIControlState())
+                    toRightArrow.setThumbImage(flipped, for: .selected)
+                    toRightArrow.setThumbImage(flipped, for: .highlighted)
                 }
                 // Flip UIButton image
                 if subView.isKind(of: UIButton.self) {
@@ -293,7 +290,7 @@ extension UITextField: TextViewType {
                 label.tag = self.tag
             }
         }
-         
+        
         handleSwitching()
     }
 }
