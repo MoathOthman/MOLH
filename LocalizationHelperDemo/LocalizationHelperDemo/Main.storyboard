@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController storyboardIdentifier="rootnav" id="2QC-AV-CKr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2mX-2z-pfs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,7 +29,7 @@
         <!--Main View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Localization102" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalizationHelperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqB-5F-EF1" customClass="MirroringLabel" customModule="Localization102" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqB-5F-EF1" customClass="MirroringLabel" customModule="LocalizationHelperDemo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="79" width="139" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="WSq-cw-DkS"/>
@@ -54,8 +54,8 @@
                                     <constraint firstAttribute="height" constant="32" id="wnN-l3-z6x"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-hU-lgc">
-                                <rect key="frame" x="20" y="184" width="139" height="30"/>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-hU-lgc">
+                                <rect key="frame" x="20" y="184" width="339" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="H5T-Sy-0RD"/>
                                 </constraints>
@@ -64,7 +64,7 @@
                                     <segue destination="oPo-J9-SrU" kind="show" id="bqL-5r-6Wp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="-2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa0-jT-D1A" customClass="MirroringLabel" customModule="Localization102" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="-2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa0-jT-D1A" customClass="MirroringLabel" customModule="LocalizationHelperDemo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="230" width="258" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="0h9-Uw-OYh"/>
@@ -102,7 +102,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XqB-5F-EF1" firstAttribute="leading" secondItem="OBu-4w-5cn" secondAttribute="leading" id="5im-My-GS4"/>
-                            <constraint firstItem="jMW-hU-lgc" firstAttribute="trailing" secondItem="XqB-5F-EF1" secondAttribute="trailing" id="7eI-Z5-BUf"/>
                             <constraint firstItem="OBu-4w-5cn" firstAttribute="top" secondItem="XqB-5F-EF1" secondAttribute="bottom" constant="8" symbolic="YES" id="8vP-PF-t7U"/>
                             <constraint firstItem="qa0-jT-D1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="9rg-Ec-sJ6"/>
                             <constraint firstItem="qa0-jT-D1A" firstAttribute="top" secondItem="jMW-hU-lgc" secondAttribute="bottom" constant="16" id="Guh-PV-gNb"/>
@@ -114,6 +113,7 @@
                             <constraint firstItem="Cje-ky-EQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="98" id="go3-wN-UCP"/>
                             <constraint firstItem="jMW-hU-lgc" firstAttribute="leading" secondItem="OBu-4w-5cn" secondAttribute="leading" id="huU-i6-yRJ"/>
                             <constraint firstItem="Cje-ky-EQg" firstAttribute="top" secondItem="fiM-aM-EMW" secondAttribute="bottom" constant="80" id="mlQ-gv-7mm"/>
+                            <constraint firstItem="jMW-hU-lgc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tYg-0e-tNl"/>
                             <constraint firstItem="fiM-aM-EMW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yaP-Lm-nQr"/>
                         </constraints>
                     </view>
