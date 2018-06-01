@@ -156,7 +156,7 @@ open class MOLH {
 }
 
 extension Bundle {
-    func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
+    @objc func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
         // check if its the main bundle then if the bundle of the current language is available
         // then try without locale
         // if not go back to base
@@ -209,7 +209,7 @@ extension UIImage {
 
 extension UIViewController {
     
-    func mirroringviewDidLoad() {
+    @objc func mirroringviewDidLoad() {
         mirroringviewDidLoad()
         if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
             loopThroughSubViewAndFlipTheImageIfItsNeeded(self.view.subviews)
@@ -276,7 +276,7 @@ extension UIControl {
             }
         }
     }
-    public  func cstmlayoutSubviews() {
+    @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         handleSwitching()
     }
@@ -296,14 +296,14 @@ extension UITextField: TextViewType {
 }
 
 extension UITextView: TextViewType {
-    public  func cstmlayoutSubviews() {
+    @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         handleSwitching()
     }
 }
 
 extension UILabel: TextViewType {
-    public  func cstmlayoutSubviews() {
+    @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         handleSwitching()
     }
@@ -365,10 +365,10 @@ open class MOLHTextField: UITextField {
 // MARK: - Utility
 /// Exchange the implementation of two methods for the same Class override will replace sel
 private func swizzle(class cls: AnyClass, sel: Selector, override: Selector) {
-    let origMethod: Method = class_getInstanceMethod(cls, sel);
-    let overrideMethod: Method = class_getInstanceMethod(cls, override);
+    guard let origMethod: Method = class_getInstanceMethod(cls, sel) else { return }
+    guard let overrideMethod: Method = class_getInstanceMethod(cls, override) else { return }
     if (class_addMethod(cls, sel, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-        class_replaceMethod(cls, override, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+        class_replaceMethod(cls, override, method_getImplementation(origMethod), method_getTypeEncoding(origMethod))
     } else {
         method_exchangeImplementations(origMethod, overrideMethod);
     }
