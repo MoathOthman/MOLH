@@ -108,4 +108,15 @@ open class MOLHLanguage {
     public static func isRTLLanguage() -> Bool {
         return currentLocaleIdentifier().hasPrefix("ar") || currentLocaleIdentifier().hasPrefix("fa")
     }
+    
+    /**
+     Check if the current language is a right to left language
+     
+     @param language to be tested
+
+     @return true if its a right to left language
+     */
+    public static func isRTLLanguage(language: String) -> Bool {
+        return language.hasPrefix("ar") || language.hasPrefix("fa")
+    }
 }

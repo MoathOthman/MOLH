@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -84,7 +84,7 @@
                                     <action selector="switchTheLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnH-TR-2p8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Centered TextField Case" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiM-aM-EMW">
+                            <textField opaque="NO" clipsSubviews="YES" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Centered TextField Case" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiM-aM-EMW">
                                 <rect key="frame" x="79" y="306.5" width="217" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="217" id="Lds-iU-Hr3"/>
@@ -120,6 +120,7 @@
                     <navigationItem key="navigationItem" title="Main View" id="eV5-Ly-eMc"/>
                     <connections>
                         <outlet property="programmaticallylocalizedLabel" destination="qa0-jT-D1A" id="8JT-qW-jzY"/>
+                        <outlet property="textField" destination="fiM-aM-EMW" id="3gA-WO-lYo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

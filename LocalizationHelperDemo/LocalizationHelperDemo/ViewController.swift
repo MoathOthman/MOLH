@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var programmaticallylocalizedLabel: UILabel!
+    @IBOutlet var textField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.programmaticallylocalizedLabel.text = NSLocalizedString("localize me please", comment: "Localize me Label in the main scene")
-        // Do any additional setup after loading the view, typically from a nib.
+//        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: .UITextInputCurrentInputModeDidChange, object: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    @objc func inputModeDidChange(_ notification: Notification) {
+//        if let language = self.textInputMode?.primaryLanguage, MOLHLanguage.isRTLLanguage(language: language) {
+//            textField.textAlignment = .right
+//        } else {
+//            textField.textAlignment = .left
+//        }
+//    }
     
     @IBAction func switchTheLanguage(_ sender: UIButton) {
         MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
