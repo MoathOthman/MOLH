@@ -292,6 +292,20 @@ extension UITextField: TextViewType {
         }
         
         handleSwitching()
+        listenToKeyboard()
+    }
+    
+    func listenToKeyboard() {
+        NotificationCenter.default.removeObserver(self, name: .UITextInputCurrentInputModeDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: .UITextInputCurrentInputModeDidChange, object: nil)
+    }
+    
+    @objc func inputModeDidChange(_ notification: Notification) {
+        if let language = self.textInputMode?.primaryLanguage, MOLHLanguage.isRTLLanguage(language: language) {
+            self.textAlignment = .right
+        } else {
+            self.textAlignment = .left
+        }
     }
 }
 
