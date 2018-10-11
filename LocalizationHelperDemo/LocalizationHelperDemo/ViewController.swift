@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func switchTheLanguage(_ sender: UIButton) {
         MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-        MOLH.reset()
+        MOLH.reset(transition: .transitionCrossDissolve)
     }
     
     @IBAction func didEnd(_ sender: UITextField) {
