@@ -153,6 +153,16 @@ open class MOLH {
             }
         }
     }
+    
+    open class func reset(transition:UIViewAnimationOptions) {
+        if let delegate = UIApplication.shared.delegate {
+            if delegate is MOLHResetable {
+                (delegate as!MOLHResetable).reset()
+            }
+            UIView.transition(with: ((delegate.window)!)!, duration: 0.5, options: transition, animations: {}) { (f) in
+            }
+        }
+    }
 }
 
 extension Bundle {
