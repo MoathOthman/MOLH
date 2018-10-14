@@ -141,14 +141,14 @@ open class MOLH {
      reset app which will perform transition and call reset on appdelegate if it's MOLHResetable
      */
     open class func reset() {
-        var transition = UIViewAnimationOptions.transitionFlipFromRight
+        var transition = UIView.AnimationOptions.transitionFlipFromRight
         if !MOLHLanguage.isRTLLanguage() {
             transition = .transitionFlipFromLeft
         }
        reset(transition: transition)
     }
     
-    open class func reset(transition: UIViewAnimationOptions) {
+    open class func reset(transition: UIView.AnimationOptions) {
         if let delegate = UIApplication.shared.delegate {
             if delegate is MOLHResetable {
                 (delegate as!MOLHResetable).reset()
@@ -197,7 +197,7 @@ extension Bundle {
 extension UIImage {
     public func flippedImage() -> UIImage?{
         if let _cgImag = self.cgImage {
-            let flippedimg = UIImage(cgImage: _cgImag, scale:self.scale , orientation: UIImageOrientation.upMirrored)
+            let flippedimg = UIImage(cgImage: _cgImag, scale:self.scale , orientation: UIImage.Orientation.upMirrored)
             return flippedimg
         }
         return nil
@@ -244,20 +244,20 @@ extension UIViewController {
                 // Flip UISlider thumb image
                 if subView.isKind(of: UISlider.self) {
                     let toRightArrow = subView as! UISlider
-                    let _img = toRightArrow.thumbImage(for: UIControlState())
+                    let _img = toRightArrow.thumbImage(for: UIControl.State())
                     let flipped = _img?.flipIfNeeded()
-                    toRightArrow.setThumbImage(flipped, for: UIControlState())
+                    toRightArrow.setThumbImage(flipped, for: UIControl.State())
                     toRightArrow.setThumbImage(flipped, for: .selected)
                     toRightArrow.setThumbImage(flipped, for: .highlighted)
                 }
                 // Flip UIButton image
                 if subView.isKind(of: UIButton.self) {
                     let _subView = subView as! UIButton
-                    var image = _subView.image(for: UIControlState())
+                    var image = _subView.image(for: UIControl.State())
                     image = image?.flippedImage()
-                    _subView.setImage(image, for: UIControlState())
-                    _subView.setImage(image, for: UIControlState.selected)
-                    _subView.setImage(image, for: UIControlState.highlighted)
+                    _subView.setImage(image, for: UIControl.State())
+                    _subView.setImage(image, for: UIControl.State.selected)
+                    _subView.setImage(image, for: UIControl.State.highlighted)
                 }
                 
                 loopThroughSubViewAndFlipTheImageIfItsNeeded(subView.subviews)
@@ -300,8 +300,8 @@ extension UITextField: TextViewType {
     }
     
     func listenToKeyboard() {
-        NotificationCenter.default.removeObserver(self, name: .UITextInputCurrentInputModeDidChange, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: .UITextInputCurrentInputModeDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
     }
     
     @objc func inputModeDidChange(_ notification: Notification) {
