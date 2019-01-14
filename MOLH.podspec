@@ -30,5 +30,5 @@ s.source_files  = "MOLH/*.swift"
 
 s.requires_arc = true
 
-
+s.swift_version = '4.2'
 end
