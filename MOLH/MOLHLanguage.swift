@@ -64,7 +64,7 @@ open class MOLHLanguage {
      */
     public class func setDefaultLanguage(_ language: String) {
         if !UserDefaults.standard.bool(forKey: MOLHFirstTimeLanguage) {
-            self.setAppleLAnguageTo(language)
+            MOLH.setLanguageTo(language)
             UserDefaults.standard.set(true, forKey: MOLHFirstTimeLanguage)
         }
     }

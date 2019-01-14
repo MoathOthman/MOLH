@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "MOLH"
-s.version      = "v0.4"
+s.version      = "0.5"
 s.summary      = "Localization helper for iOS apps mainly focusing on the LTR/RTL issue Edit"
 
 s.description  = <<-DESC
@@ -22,7 +22,7 @@ s.social_media_url   = "http://twitter.com/dark_torch"
 s.platform     = :ios, "9.0"
 
 
-s.source       = { :git => "https://github.com/MoathOthman/MOLH.git", :tag => s.version.to_s }
+s.source       = { :git => "https://github.com/MoathOthman/MOLH.git", :tag => "v"+s.version.to_s }
 
 
 s.source_files  = "MOLH/*.swift"
