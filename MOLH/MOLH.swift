@@ -132,8 +132,14 @@ open class MOLH {
         MOLHLanguage.setAppleLAnguageTo(language)
         if MOLHLanguage.isRTLLanguage() {
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIButton.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
         } else {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UIButton.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
     
