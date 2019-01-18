@@ -20,7 +20,7 @@ protocol TextAlignmented: NSObjectProtocol {
 
 extension LayoutSwizzlable where Self: TextAlignmented & Taggable {
     func handleSwitching() {
-        if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
+        if self.tag < MOLH.shared.maximumLocalizableTag + 1, textAlignment != .center {
             if MOLHLanguage.isRTLLanguage()  {
                 if self.textAlignment == .right { return }
                 self.textAlignment = .right
