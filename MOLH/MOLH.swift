@@ -7,7 +7,7 @@ import UIKit
 let viewkey = UnsafePointer<Any>(bitPattern: 64)
 
 protocol LayoutSwizzlable: NSObjectProtocol {
-    func handleSwitching()
+    func handleSwitching(forceSwitchingRegardlessOfTag: Bool)
 }
 
 protocol Taggable: NSObjectProtocol {
@@ -19,8 +19,8 @@ protocol TextAlignmented: NSObjectProtocol {
 }
 
 extension LayoutSwizzlable where Self: TextAlignmented & Taggable {
-    func handleSwitching() {
-        if self.tag < MOLH.shared.maximumLocalizableTag + 1, textAlignment != .center {
+    func handleSwitching(forceSwitchingRegardlessOfTag: Bool) {
+        if self.tag < MOLH.shared.maximumLocalizableTag + 1 || forceSwitchingRegardlessOfTag , textAlignment != .center  {
             if MOLHLanguage.isRTLLanguage()  {
                 if self.textAlignment == .right { return }
                 self.textAlignment = .right
@@ -277,8 +277,8 @@ extension UIViewController {
 
 // MARK : - Extensions
 extension UIControl {
-    internal func handleControlSwitching() {
-        if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
+    internal func handleControlSwitching(forceSwitchingRegardlessOfTag: Bool) {
+        if self.tag < MOLH.shared.maximumLocalizableTag + 1  || forceSwitchingRegardlessOfTag {
             if MOLHLanguage.isRTLLanguage()  {
                 if self.contentHorizontalAlignment == .right { return }
                 self.contentHorizontalAlignment = .right
@@ -291,29 +291,29 @@ extension UIControl {
     
     @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        handleControlSwitching()
+        handleControlSwitching(forceSwitchingRegardlessOfTag: false)
     }
 }
 
 extension UITextField: TextViewType {
     public override func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        handleSwitching()
-        handleControlSwitching()
+        handleSwitching(forceSwitchingRegardlessOfTag: false)
+        handleControlSwitching(forceSwitchingRegardlessOfTag: false)
     }
 }
 
 extension UITextView: TextViewType {
     @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        handleSwitching()
+        handleSwitching(forceSwitchingRegardlessOfTag: false)
     }
 }
 
 extension UILabel: TextViewType {
     @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        handleSwitching()
+        handleSwitching(forceSwitchingRegardlessOfTag: false)
     }
 }
 
@@ -326,9 +326,14 @@ extension UILabel: TextViewType {
  @auther Moath Othman
  */
 open class MOLHControl: UIControl {
+    open var forceSwitchingRegardlessOfTag: Bool = false {
+        didSet {
+            handleControlSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
+        }
+    }
     override open func layoutSubviews() {
         super.layoutSubviews()
-        handleControlSwitching()
+        handleControlSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
     }
 }
 /**
@@ -337,9 +342,14 @@ open class MOLHControl: UIControl {
  @auther Moath Othman
  */
 open class MOLHLabel: UILabel {
+    open var forceSwitchingRegardlessOfTag: Bool = false {
+        didSet {
+            handleSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
+        }
+    }
     override open func layoutSubviews() {
         super.layoutSubviews()
-        handleSwitching()
+        handleSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
     }
 }
 /**
@@ -348,9 +358,14 @@ open class MOLHLabel: UILabel {
  @auther Moath Othman
  */
 open class MOLHTextView: UITextView {
+    open var forceSwitchingRegardlessOfTag: Bool = false {
+        didSet {
+            handleSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
+        }
+    }
     override open func layoutSubviews() {
         super.layoutSubviews()
-        handleSwitching()
+        handleSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
     }
 }
 /**
@@ -359,6 +374,11 @@ open class MOLHTextView: UITextView {
  @auther Moath Othman
  */
 open class MOLHTextField: UITextField {
+    open var forceSwitchingRegardlessOfTag: Bool = false {
+        didSet {
+            setupForLocalization()
+        }
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -371,8 +391,8 @@ open class MOLHTextField: UITextField {
     }
 
     func setupForLocalization() {
-        handleControlSwitching()
-        handleSwitching()
+        handleControlSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
+        handleSwitching(forceSwitchingRegardlessOfTag: forceSwitchingRegardlessOfTag)
     }
 }
 
