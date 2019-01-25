@@ -17,6 +17,7 @@
 		EC9594BF1F29EC63006984E0 /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */; };
 		EC9594C01F29EC63006984E0 /* MOLHLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */; };
 		EC9594C11F29EC63006984E0 /* MOLHSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */; };
+		ECE2F0C321FB72AD009D506D /* MOLH.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ECE2F0C221FB72AC009D506D /* MOLH.podspec */; };
 		ECE534921EE2237300EBB394 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECE534941EE2237300EBB394 /* Localizable.strings */; };
 		ECE534981EE226F300EBB394 /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE534971EE226F300EBB394 /* arrow-right.png */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
 		EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHLanguage.swift; sourceTree = "<group>"; };
 		EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHSizable.swift; sourceTree = "<group>"; };
+		ECE2F0C221FB72AC009D506D /* MOLH.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MOLH.podspec; path = ../../MOLH.podspec; sourceTree = "<group>"; };
 		ECE534911EE2236800EBB394 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		ECE534931EE2237300EBB394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECE534951EE2237500EBB394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				EC9594B71F29EC63006984E0 /* MOLH */,
 				EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */,
 				EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */,
+				ECE2F0C221FB72AC009D506D /* MOLH.podspec */,
 				ECE534941EE2237300EBB394 /* Localizable.strings */,
 				EC15335521F39E440048AB78 /* Main.storyboard */,
 				EC5B8FF21EE0ECA4003BE809 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE2F0C321FB72AD009D506D /* MOLH.podspec in Resources */,
 				EC15335321F39E440048AB78 /* Main.storyboard in Resources */,
 				ECE534921EE2237300EBB394 /* Localizable.strings in Resources */,
 				EC5B8FF61EE0ECA4003BE809 /* LaunchScreen.storyboard in Resources */,
