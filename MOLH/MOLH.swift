@@ -102,11 +102,13 @@ open class MOLH {
             assert(maximumLocalizableTag <= -1, "Tag should be less than or equal -1 , since 0 will corrupt UIKit-Made UIs e.g. UIAlertView/Share...")
         }
     }
+    
     /**
      @description
      * set special keywords "Keys"  that handled by external frameworks to be localized locally
      */
     public var specialKeyWords: [String] = []
+    
     /**
      Activate Localization Helper
      
@@ -275,7 +277,7 @@ extension UIViewController {
 
 // MARK : - Extensions
 extension UIControl {
-    internal func handleSwitching() {
+    internal func handleControlSwitching() {
         if self.tag < MOLH.shared.maximumLocalizableTag + 1 {
             if MOLHLanguage.isRTLLanguage()  {
                 if self.contentHorizontalAlignment == .right { return }
@@ -286,36 +288,18 @@ extension UIControl {
             }
         }
     }
+    
     @objc public  func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        handleSwitching()
+        handleControlSwitching()
     }
 }
 
 extension UITextField: TextViewType {
     public override func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
-        for subview in self.subviews {
-            if let label = subview as? UILabel {
-                label.tag = self.tag
-            }
-        }
-        
         handleSwitching()
-        listenToKeyboard()
-    }
-    
-    func listenToKeyboard() {
-        NotificationCenter.default.removeObserver(self, name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
-    }
-    
-    @objc func inputModeDidChange(_ notification: Notification) {
-        if let language = self.textInputMode?.primaryLanguage, MOLHLanguage.isRTLLanguage(language: language) {
-            self.textAlignment = .right
-        } else {
-            self.textAlignment = .left
-        }
+        handleControlSwitching()
     }
 }
 
@@ -344,7 +328,7 @@ extension UILabel: TextViewType {
 open class MOLHControl: UIControl {
     override open func layoutSubviews() {
         super.layoutSubviews()
-        handleSwitching()
+        handleControlSwitching()
     }
 }
 /**
@@ -375,13 +359,19 @@ open class MOLHTextView: UITextView {
  @auther Moath Othman
  */
 open class MOLHTextField: UITextField {
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        for subview in self.subviews {
-            if let label = subview as? UILabel {
-                label.tag = self.tag
-            }
-        }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupForLocalization()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupForLocalization()
+    }
+
+    func setupForLocalization() {
+        handleControlSwitching()
         handleSwitching()
     }
 }

@@ -11,7 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var programmaticallylocalizedLabel: UILabel!
     @IBOutlet var textField: UITextField!
-
+    @IBOutlet var arrowImage: UIImageView! {
+        didSet {
+            arrowImage.image = arrowImage.image?.flipIfNeeded()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.programmaticallylocalizedLabel.text = NSLocalizedString("localize me please", comment: "Localize me Label in the main scene")
