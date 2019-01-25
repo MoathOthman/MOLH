@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "MOLH"
-s.version      = "0.7"
+s.version      = "0.7.5"
 s.summary      = "Localization helper for iOS apps mainly focusing on the LTR/RTL issue Edit"
 
 s.description  = <<-DESC

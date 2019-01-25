@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     //   textField.forceSwitchingRegardlessOfTag = true
         self.programmaticallylocalizedLabel.text = NSLocalizedString("localize me please", comment: "Localize me Label in the main scene")
 //        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: .UITextInputCurrentInputModeDidChange, object: nil)
     }
