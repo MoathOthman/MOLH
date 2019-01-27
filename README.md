@@ -31,6 +31,9 @@ Before *.activate* set
 ### using without swizzling (prefered)
 you can choose to not use swizzling `MOLH.shared.activate(false)` , in that case you subclass MOLH-UI Subclasses , like `MOLHTextField` , this will give you more controlability as you can by-pass the *tag* requirement by using `forceSwitchingRegardlessOfTag` and set it to true.
 
+## Images
+To make sure an image is flipped when switching to RTL or to LTR, you can use `flipIfNeeded()` function on image or `UIImage().imageFlippedForRightToLeftLayoutDirection()`
+
 ### Fonts
 Its better to have the app fonts in one place in your app, e.g. a **FontManager**. and there you can decide which font to use based on the chosen language, this would be the eaiser way. 
 
