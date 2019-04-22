@@ -31,9 +31,11 @@ open class MOLHLanguage {
         let userdef = UserDefaults.standard
         let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
         let current = langArray.firstObject as! String
-        let endIndex = current.index(current.startIndex, offsetBy: 2)
-        let currentWithoutLocale = current[current.startIndex..<endIndex]
-        return String(currentWithoutLocale)
+        if let hyphenIndex = current.firstIndex(of: "-") {
+            return String(current[..<hyphenIndex])
+        } else {
+            return current
+        }
     }
     
     /**
