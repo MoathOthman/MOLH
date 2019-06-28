@@ -26,6 +26,9 @@
 		EC15335821F39E790048AB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC15335A21F39E7C0048AB78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EC15335B21F39E810048AB78 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		EC3E86B9226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Main.strings"; sourceTree = "<group>"; };
+		EC3E86BA226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EC3E86BB226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC5B8FE81EE0ECA4003BE809 /* LocalizationHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,18 @@
 		EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
 		EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHLanguage.swift; sourceTree = "<group>"; };
 		EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHSizable.swift; sourceTree = "<group>"; };
+		ECB7A11D22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/Main.strings"; sourceTree = "<group>"; };
+		ECB7A11E22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ECB7A11F22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		ECB7A12022C6742300E90F40 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Main.strings; sourceTree = "<group>"; };
+		ECB7A12122C6742300E90F40 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ECB7A12222C6742300E90F40 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ECB7A12322C6746B00E90F40 /* ckb-IQ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IQ"; path = "ckb-IQ.lproj/Main.strings"; sourceTree = "<group>"; };
+		ECB7A12422C6746B00E90F40 /* ckb-IQ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IQ"; path = "ckb-IQ.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ECB7A12522C6746B00E90F40 /* ckb-IQ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IQ"; path = "ckb-IQ.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		ECB7A12622C6747700E90F40 /* ckb-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IR"; path = "ckb-IR.lproj/Main.strings"; sourceTree = "<group>"; };
+		ECB7A12722C6747700E90F40 /* ckb-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IR"; path = "ckb-IR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ECB7A12822C6747700E90F40 /* ckb-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ckb-IR"; path = "ckb-IR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ECE2F0C221FB72AC009D506D /* MOLH.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MOLH.podspec; path = ../../MOLH.podspec; sourceTree = "<group>"; };
 		ECE534911EE2236800EBB394 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		ECE534931EE2237300EBB394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -145,9 +160,15 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				ar,
+				"agq-CM",
+				"he-IL",
+				ur,
+				"ckb-IQ",
+				"ckb-IR",
 			);
 			mainGroup = EC5B8FDF1EE0ECA4003BE809;
 			productRefGroup = EC5B8FE91EE0ECA4003BE809 /* Products */;
@@ -199,6 +220,11 @@
 				EC15335821F39E790048AB78 /* Base */,
 				EC15335A21F39E7C0048AB78 /* en */,
 				EC15335B21F39E810048AB78 /* ar */,
+				EC3E86B9226F1AB200EDE6EE /* agq-CM */,
+				ECB7A11D22C6740500E90F40 /* he-IL */,
+				ECB7A12022C6742300E90F40 /* ur */,
+				ECB7A12322C6746B00E90F40 /* ckb-IQ */,
+				ECB7A12622C6747700E90F40 /* ckb-IR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -208,6 +234,11 @@
 			children = (
 				EC5B8FF51EE0ECA4003BE809 /* Base */,
 				ECE534911EE2236800EBB394 /* ar */,
+				EC3E86BA226F1AB200EDE6EE /* agq-CM */,
+				ECB7A11E22C6740500E90F40 /* he-IL */,
+				ECB7A12122C6742300E90F40 /* ur */,
+				ECB7A12422C6746B00E90F40 /* ckb-IQ */,
+				ECB7A12722C6747700E90F40 /* ckb-IR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -218,6 +249,11 @@
 				ECE534931EE2237300EBB394 /* Base */,
 				ECE534951EE2237500EBB394 /* en */,
 				ECE534961EE2237600EBB394 /* ar */,
+				EC3E86BB226F1AB200EDE6EE /* agq-CM */,
+				ECB7A11F22C6740500E90F40 /* he-IL */,
+				ECB7A12222C6742300E90F40 /* ur */,
+				ECB7A12522C6746B00E90F40 /* ckb-IQ */,
+				ECB7A12822C6747700E90F40 /* ckb-IR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -342,11 +378,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5YP97VN386;
 				INFOPLIST_FILE = LocalizationHelperDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitetorch.LocalizationHelperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -356,11 +392,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5YP97VN386;
 				INFOPLIST_FILE = LocalizationHelperDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitetorch.LocalizationHelperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

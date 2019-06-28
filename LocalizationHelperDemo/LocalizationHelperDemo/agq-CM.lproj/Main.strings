@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Switch Language"; ObjectID = "Cje-ky-EQg"; */
+"Cje-ky-EQg.normalTitle" = "Switch Language";
+
+/* Class = "UILabel"; text = "Hello "; ObjectID = "XqB-5F-EF1"; */
+"XqB-5F-EF1.text" = "Hello ";
+
+/* Class = "UINavigationItem"; title = "Main View"; ObjectID = "eV5-Ly-eMc"; */
+"eV5-Ly-eMc.title" = "CAMERA";
+
+/* Class = "UITextField"; placeholder = "TextField Case"; ObjectID = "fiM-aM-EMW"; */
+"fiM-aM-EMW.placeholder" = "CAMERON Case";
+
+/* Class = "UIButton"; normalTitle = "Go to Second View"; ObjectID = "jMW-hU-lgc"; */
+"jMW-hU-lgc.normalTitle" = "CAMERON Second View";
+
+/* Class = "UIViewController"; title = "Second "; ObjectID = "oPo-J9-SrU"; */
+"oPo-J9-SrU.title" = "CAMERON ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qa0-jT-D1A"; */
+"qa0-jT-D1A.text" = "Label";

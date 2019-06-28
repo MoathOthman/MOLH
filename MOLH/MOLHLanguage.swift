@@ -108,7 +108,7 @@ open class MOLHLanguage {
      @return true if its a right to left language
      */
     public static func isRTLLanguage() -> Bool {
-        return currentLocaleIdentifier().hasPrefix("ar") || currentLocaleIdentifier().hasPrefix("fa")
+        return !RTLLanguages.filter{$0 == currentLocaleIdentifier()}.isEmpty
     }
     
     /**
@@ -119,6 +119,8 @@ open class MOLHLanguage {
      @return true if its a right to left language
      */
     public static func isRTLLanguage(language: String) -> Bool {
-        return language.hasPrefix("ar") || language.hasPrefix("fa")
+        return !RTLLanguages.filter{language == $0}.isEmpty
     }
+    
+    private static let RTLLanguages = ["ar", "fr", "he", "ckb-IQ","ckb-IR", "ur"]
 }
