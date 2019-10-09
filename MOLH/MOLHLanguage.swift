@@ -16,7 +16,7 @@ private let MOLHFirstTimeLanguage = "plhfirsttimelanguage"
     - fetch current language without locale
     - get current language with locale
     - set current language
-    - set default language 
+    - set default language
     - check if current language is RTL
     - check if current language is Arabic
     - check if a text has english chars
@@ -28,25 +28,20 @@ open class MOLHLanguage {
     
     /// get current Apple language
     public class func currentAppleLanguage() -> String {
-        let userdef = UserDefaults.standard
-        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
-        let current = langArray.firstObject as! String
+        let current = preferedLanguage.first!
         if let hyphenIndex = current.firstIndex(of: "-") {
             return String(current[..<hyphenIndex])
         } else {
             return current
         }
     }
-    
     /**
      Get the current language with locae e.g. ar-KW
 
      @return language identifier string
      */
     public class func currentLocaleIdentifier() -> String {
-        let userdef = UserDefaults.standard
-        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
-        let current = langArray.firstObject as! String
+        let current = preferedLanguage.first!
         return current
     }
     
@@ -123,4 +118,10 @@ open class MOLHLanguage {
     }
     
     private static let RTLLanguages = ["ar", "fr", "he", "ckb-IQ","ckb-IR", "ur"]
+    
+    private static var preferedLanguage: [String] {
+        let userdef = UserDefaults.standard
+        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY)
+        return langArray as? [String] ?? []
+    }
 }
