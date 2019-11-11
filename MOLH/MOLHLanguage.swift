@@ -103,7 +103,7 @@ open class MOLHLanguage {
      @return true if its a right to left language
      */
     public static func isRTLLanguage() -> Bool {
-        return !RTLLanguages.filter{$0 == currentLocaleIdentifier()}.isEmpty
+        return !RTLLanguages.filter{$0 == currentLocaleIdentifier() || $0 == currentAppleLanguage()}.isEmpty
     }
     
     /**
