@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EC15335321F39E440048AB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC15335521F39E440048AB78 /* Main.storyboard */; };
+		EC48F76D238186500095E588 /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F768238186500095E588 /* MOLHFontLocalizableViews.swift */; };
+		EC48F76E238186500095E588 /* MOLHFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F769238186500095E588 /* MOLHFont.swift */; };
+		EC48F76F238186500095E588 /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F76A238186500095E588 /* MOLH.swift */; };
+		EC48F770238186500095E588 /* MOLHSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F76B238186500095E588 /* MOLHSizable.swift */; };
+		EC48F771238186500095E588 /* MOLHLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F76C238186500095E588 /* MOLHLanguage.swift */; };
 		EC5B8FEC1EE0ECA4003BE809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */; };
 		EC5B8FEE1EE0ECA4003BE809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */; };
 		EC5B8FF31EE0ECA4003BE809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B8FF21EE0ECA4003BE809 /* Assets.xcassets */; };
 		EC5B8FF61EE0ECA4003BE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B8FF41EE0ECA4003BE809 /* LaunchScreen.storyboard */; };
-		EC9594BD1F29EC63006984E0 /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594B81F29EC63006984E0 /* MOLH.swift */; };
-		EC9594BE1F29EC63006984E0 /* MOLHFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594B91F29EC63006984E0 /* MOLHFont.swift */; };
-		EC9594BF1F29EC63006984E0 /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */; };
-		EC9594C01F29EC63006984E0 /* MOLHLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */; };
-		EC9594C11F29EC63006984E0 /* MOLHSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */; };
 		ECE2F0C321FB72AD009D506D /* MOLH.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ECE2F0C221FB72AC009D506D /* MOLH.podspec */; };
 		ECE534921EE2237300EBB394 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECE534941EE2237300EBB394 /* Localizable.strings */; };
 		ECE534981EE226F300EBB394 /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE534971EE226F300EBB394 /* arrow-right.png */; };
@@ -29,17 +29,17 @@
 		EC3E86B9226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Main.strings"; sourceTree = "<group>"; };
 		EC3E86BA226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		EC3E86BB226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EC48F768238186500095E588 /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOLHFontLocalizableViews.swift; path = ../Sources/MOLH/MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
+		EC48F769238186500095E588 /* MOLHFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOLHFont.swift; path = ../Sources/MOLH/MOLHFont.swift; sourceTree = "<group>"; };
+		EC48F76A238186500095E588 /* MOLH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOLH.swift; path = ../Sources/MOLH/MOLH.swift; sourceTree = "<group>"; };
+		EC48F76B238186500095E588 /* MOLHSizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOLHSizable.swift; path = ../Sources/MOLH/MOLHSizable.swift; sourceTree = "<group>"; };
+		EC48F76C238186500095E588 /* MOLHLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOLHLanguage.swift; path = ../Sources/MOLH/MOLHLanguage.swift; sourceTree = "<group>"; };
 		EC5B8FE81EE0ECA4003BE809 /* LocalizationHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC5B8FF21EE0ECA4003BE809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5B8FF51EE0ECA4003BE809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5B8FF71EE0ECA4003BE809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC9594B81F29EC63006984E0 /* MOLH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLH.swift; sourceTree = "<group>"; };
-		EC9594B91F29EC63006984E0 /* MOLHFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFont.swift; sourceTree = "<group>"; };
-		EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
-		EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHLanguage.swift; sourceTree = "<group>"; };
-		EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHSizable.swift; sourceTree = "<group>"; };
 		ECB7A11D22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/Main.strings"; sourceTree = "<group>"; };
 		ECB7A11E22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		ECB7A11F22C6740500E90F40 /* he-IL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "he-IL"; path = "he-IL.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -107,11 +107,11 @@
 		EC9594B71F29EC63006984E0 /* MOLH */ = {
 			isa = PBXGroup;
 			children = (
-				EC9594B81F29EC63006984E0 /* MOLH.swift */,
-				EC9594B91F29EC63006984E0 /* MOLHFont.swift */,
-				EC9594BA1F29EC63006984E0 /* MOLHFontLocalizableViews.swift */,
-				EC9594BB1F29EC63006984E0 /* MOLHLanguage.swift */,
-				EC9594BC1F29EC63006984E0 /* MOLHSizable.swift */,
+				EC48F76A238186500095E588 /* MOLH.swift */,
+				EC48F769238186500095E588 /* MOLHFont.swift */,
+				EC48F768238186500095E588 /* MOLHFontLocalizableViews.swift */,
+				EC48F76C238186500095E588 /* MOLHLanguage.swift */,
+				EC48F76B238186500095E588 /* MOLHSizable.swift */,
 			);
 			name = MOLH;
 			path = ../../MOLH;
@@ -201,13 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9594BE1F29EC63006984E0 /* MOLHFont.swift in Sources */,
+				EC48F770238186500095E588 /* MOLHSizable.swift in Sources */,
+				EC48F76E238186500095E588 /* MOLHFont.swift in Sources */,
+				EC48F76F238186500095E588 /* MOLH.swift in Sources */,
 				EC5B8FEE1EE0ECA4003BE809 /* ViewController.swift in Sources */,
+				EC48F76D238186500095E588 /* MOLHFontLocalizableViews.swift in Sources */,
+				EC48F771238186500095E588 /* MOLHLanguage.swift in Sources */,
 				EC5B8FEC1EE0ECA4003BE809 /* AppDelegate.swift in Sources */,
-				EC9594BF1F29EC63006984E0 /* MOLHFontLocalizableViews.swift in Sources */,
-				EC9594BD1F29EC63006984E0 /* MOLH.swift in Sources */,
-				EC9594C11F29EC63006984E0 /* MOLHSizable.swift in Sources */,
-				EC9594C01F29EC63006984E0 /* MOLHLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
