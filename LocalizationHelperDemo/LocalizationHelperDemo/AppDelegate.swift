@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        MOLHFont.shared.arabic = UIFont(name: "Courier", size: 13)!
         MOLHLanguage.setDefaultLanguage("ar")
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]

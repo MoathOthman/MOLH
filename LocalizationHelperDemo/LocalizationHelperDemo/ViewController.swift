@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var programmaticallylocalizedLabel: UILabel!
+    @IBOutlet var labelWithFont: MOLHFontLocalizableLabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var arrowImage: UIImageView! {
         didSet {
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      //   textField.forceSwitchingRegardlessOfTag = true
         self.programmaticallylocalizedLabel.text = NSLocalizedString("localize me please", comment: "Localize me Label in the main scene")
+        self.labelWithFont.updateFont()
 //        NotificationCenter.default.addObserver(self, selector: #selector(inputModeDidChange), name: .UITextInputCurrentInputModeDidChange, object: nil)
     }
     
