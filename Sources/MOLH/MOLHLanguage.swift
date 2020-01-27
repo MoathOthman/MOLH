@@ -117,7 +117,7 @@ open class MOLHLanguage {
         return !RTLLanguages.filter{language == $0}.isEmpty
     }
     
-    private static let RTLLanguages = ["ar", "fa", "he", "ckb-IQ","ckb-IR", "ur"]
+    private static let RTLLanguages = ["ar", "fa", "he", "ckb-IQ","ckb-IR", "ur", "ckb"]
     
     private static var preferedLanguage: [String] {
         let userdef = UserDefaults.standard
