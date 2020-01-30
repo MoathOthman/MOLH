@@ -137,11 +137,15 @@ open class MOLH {
             UIButton.appearance().semanticContentAttribute = .forceRightToLeft
             UITextView.appearance().semanticContentAttribute = .forceRightToLeft
             UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
         } else {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
             UIButton.appearance().semanticContentAttribute = .forceLeftToRight
             UITextView.appearance().semanticContentAttribute = .forceLeftToRight
             UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+            UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
     
