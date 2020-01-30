@@ -132,20 +132,8 @@ open class MOLH {
     /// Set Language , Language parameter string identify the language e.x. en, ar,fr ...
     open class func setLanguageTo(_ language: String) {
         MOLHLanguage.setAppleLAnguageTo(language)
-        if MOLHLanguage.isRTLLanguage() {
-            UIView.appearance().semanticContentAttribute = .forceRightToLeft
-            UIButton.appearance().semanticContentAttribute = .forceRightToLeft
-            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
-            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
-            UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
-            UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
-        } else {
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            UIButton.appearance().semanticContentAttribute = .forceLeftToRight
-            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
-            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
-            UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
-            UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
+        [UIView.appearance(), UIButton.appearance(), UITextView.appearance(), UITextField.appearance(), UINavigationBar.appearance(), UITabBar.appearance()].forEach { (view) in
+                view[keyPath: \.semanticContentAttribute] = MOLHLanguage.isRTLLanguage() ? .forceRightToLeft :.forceLeftToRight
         }
     }
     
