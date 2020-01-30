@@ -73,7 +73,7 @@ open class MOLHLanguage {
      @return is arabic boolean
      */
     public class func isArabic() -> Bool {
-        return currentAppleLanguage() == "ar"
+        return currentAppleLanguage() == "ar" || currentAppleLanguage() == "ckb" || currentAppleLanguage() == "ckb-IQ" || currentAppleLanguage() == "ckb-IR"
     }
     
     /**
