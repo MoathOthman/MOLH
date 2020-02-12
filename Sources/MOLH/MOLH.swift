@@ -139,6 +139,8 @@ open class MOLH {
             UITextField.appearance().semanticContentAttribute = .forceRightToLeft
             UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
             UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UISearchBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UILabel.appearance().semanticContentAttribute = .forceRightToLeft
         } else {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
             UIButton.appearance().semanticContentAttribute = .forceLeftToRight
@@ -146,6 +148,8 @@ open class MOLH {
             UITextField.appearance().semanticContentAttribute = .forceLeftToRight
             UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
             UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UISearchBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UILabel.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
     
