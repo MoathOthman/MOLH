@@ -156,20 +156,20 @@ open class MOLH {
     /**
      reset app which will perform transition and call reset on appdelegate if it's MOLHResetable
      */
-    open class func reset() {
+    open class func reset(duration: Float = 0.5) {
         var transition = UIView.AnimationOptions.transitionFlipFromRight
         if !MOLHLanguage.isRTLLanguage() {
             transition = .transitionFlipFromLeft
         }
-       reset(transition: transition)
+        reset(transition: transition, duration: duration)
     }
     
-    open class func reset(transition: UIView.AnimationOptions) {
+    open class func reset(transition: UIView.AnimationOptions, duration: Float = 0.5) {
         if let delegate = UIApplication.shared.delegate {
             if delegate is MOLHResetable {
                 (delegate as!MOLHResetable).reset()
             }
-            UIView.transition(with: ((delegate.window)!)!, duration: 0.5, options: transition, animations: {}) { (f) in
+            UIView.transition(with: ((delegate.window)!)!, duration: TimeInterval(duration), options: transition, animations: {}) { (f) in
             }
         }
     }
