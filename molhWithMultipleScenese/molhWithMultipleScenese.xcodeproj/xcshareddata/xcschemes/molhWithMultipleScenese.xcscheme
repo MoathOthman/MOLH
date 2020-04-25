@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1140"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC5B8FE71EE0ECA4003BE809"
-               BuildableName = "LocalizationHelperDemo.app"
-               BlueprintName = "LocalizationHelperDemo"
-               ReferencedContainer = "container:LocalizationHelperDemo.xcodeproj">
+               BlueprintIdentifier = "ECC09DBD24544C5500A7ED48"
+               BuildableName = "molhWithMultipleScenese.app"
+               BlueprintName = "molhWithMultipleScenese"
+               ReferencedContainer = "container:molhWithMultipleScenese.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC5B8FE71EE0ECA4003BE809"
-            BuildableName = "LocalizationHelperDemo.app"
-            BlueprintName = "LocalizationHelperDemo"
-            ReferencedContainer = "container:LocalizationHelperDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -55,14 +44,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC5B8FE71EE0ECA4003BE809"
-            BuildableName = "LocalizationHelperDemo.app"
-            BlueprintName = "LocalizationHelperDemo"
-            ReferencedContainer = "container:LocalizationHelperDemo.xcodeproj">
+            BlueprintIdentifier = "ECC09DBD24544C5500A7ED48"
+            BuildableName = "molhWithMultipleScenese.app"
+            BlueprintName = "molhWithMultipleScenese"
+            ReferencedContainer = "container:molhWithMultipleScenese.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC5B8FE71EE0ECA4003BE809"
-            BuildableName = "LocalizationHelperDemo.app"
-            BlueprintName = "LocalizationHelperDemo"
-            ReferencedContainer = "container:LocalizationHelperDemo.xcodeproj">
+            BlueprintIdentifier = "ECC09DBD24544C5500A7ED48"
+            BuildableName = "molhWithMultipleScenese.app"
+            BlueprintName = "molhWithMultipleScenese"
+            ReferencedContainer = "container:molhWithMultipleScenese.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
