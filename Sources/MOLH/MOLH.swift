@@ -164,12 +164,22 @@ open class MOLH {
         reset(transition: transition, duration: duration)
     }
     
-    open class func reset(transition: UIView.AnimationOptions, duration: Float = 0.5) {
-        if let delegate = UIApplication.shared.delegate {
+    open class func reset(transition: UIView.AnimationOptions) {
+        if let window = UIApplication.shared.windows.first {
+            UIView.transition(with: window, duration: 0.5, options: transition, animations: {}) { _ in }
+        } else if let delegate = UIApplication.shared.delegate {
             if delegate is MOLHResetable {
                 (delegate as!MOLHResetable).reset()
             }
-            UIView.transition(with: ((delegate.window)!)!, duration: TimeInterval(duration), options: transition, animations: {}) { (f) in
+            
+            guard let window = delegate.window else {
+                return
+            }
+            guard let currentWindow = window else {
+                return
+            }
+
+            UIView.transition(with: currentWindow, duration: 0.5, options: transition, animations: {}) { (f) in
             }
         }
     }
