@@ -10,12 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable {
-    
+    var window: UIWindow?
+
     
     func reset() {
-         let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
-         let stry = UIStoryboard(name: "Main", bundle: nil)
-         rootviewcontroller.rootViewController = stry.instantiateViewController(withIdentifier: "rootnav")
+          let stry = UIStoryboard(name: "Main", bundle: nil)
+            window?.rootViewController = stry.instantiateInitialViewController()
      }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
