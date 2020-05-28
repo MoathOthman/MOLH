@@ -165,17 +165,26 @@ open class MOLH {
     }
     
     open class func reset(transition: UIView.AnimationOptions, duration: Float = 0.5) {
-        if #available(iOS 13.0, *) {
-            for scene in UIApplication.shared.connectedScenes {
-                (scene.delegate as? MOLHResetable)?.reset()
-            }
-        } else {
+        
+        func resetWhenNoScenesAvailable() {
             if let delegate = UIApplication.shared.delegate {
                 if delegate is MOLHResetable {
                     (delegate as!MOLHResetable).reset()
                 }
                 UIView.transition(with: ((delegate.window)!)!, duration: TimeInterval(duration), options: transition, animations: {})
             }
+        }
+        
+        if #available(iOS 13.0, *) {
+            if let window = UIApplication.shared.delegate?.window, window != nil {
+               resetWhenNoScenesAvailable()
+            } else {
+                for scene in UIApplication.shared.connectedScenes {
+                    (scene.delegate as? MOLHResetable)?.reset()
+                }
+            }
+        } else {
+            resetWhenNoScenesAvailable()
         }
     }
 }
