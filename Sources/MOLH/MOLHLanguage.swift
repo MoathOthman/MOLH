@@ -28,7 +28,7 @@ open class MOLHLanguage {
     
     /// get current Apple language
     public class func currentAppleLanguage() -> String {
-        let current = preferedLanguage.first!
+        let current = preferredLanguage.first!
         if let hyphenIndex = current.firstIndex(of: "-") {
             return String(current[..<hyphenIndex])
         } else {
@@ -41,15 +41,15 @@ open class MOLHLanguage {
      @return language identifier string
      */
     public class func currentLocaleIdentifier() -> String {
-        let current = preferedLanguage.first!
+        let current = preferredLanguage.first!
         return current
     }
     
-    /// set @lang to be the first in Applelanguages list
+    /// set @lang to be the first in AppleLanguages list
     public class func setAppleLAnguageTo(_ lang: String) {
-        let userdef = UserDefaults.standard
-        userdef.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
-        userdef.synchronize()
+        let userDefaults = UserDefaults.standard
+        userDefaults.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
+        userDefaults.synchronize()
     }
     
     /**
@@ -119,9 +119,9 @@ open class MOLHLanguage {
     
     private static let RTLLanguages = ["ar", "fa", "he", "ckb-IQ","ckb-IR", "ur", "ckb"]
     
-    private static var preferedLanguage: [String] {
-        let userdef = UserDefaults.standard
-        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY)
+    private static var preferredLanguage: [String] {
+        let userDefaults = UserDefaults.standard
+        let langArray = userDefaults.object(forKey: APPLE_LANGUAGE_KEY)
         return langArray as? [String] ?? []
     }
 }

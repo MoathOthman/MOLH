@@ -19,13 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable {
         MOLHLanguage.setDefaultLanguage("ar")
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        reset()
         return true
     }
     
     func reset() {
-        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
-        let stry = UIStoryboard(name: "Main", bundle: nil)
-        rootviewcontroller.rootViewController = stry.instantiateViewController(withIdentifier: "rootnav")
+        let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        rootViewController.rootViewController = story.instantiateViewController(withIdentifier: "rootnav")
     }
 
 }
