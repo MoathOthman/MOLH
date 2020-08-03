@@ -44,6 +44,12 @@ Some controls such as ActionSheetDatePicker have locale property so you can set 
 
 `actionSheetDatePicker?.locale = Locale(identifier: MOLHLanguage.currentLocaleIdentifier())`
 
+## Common Issues
+### Collection view content are flipped in a non readable way
+use this line to solve it 
+`collectionView.semanticContentAttribute = .unspecified`
+Thanks to [didats](https://github.com/didats)
+
 you may check [this post](https://medium.com/@dark_torch/working-with-localization-in-swift-part-2-e7c8a660eb2a).
 
 
