@@ -45,6 +45,11 @@ public protocol MOLHResetable {
     func reset()
 }
 
+@available(iOS 13.0, *)
+public protocol MOLHSceneResetable {
+    func reset(scene: UIScene)
+}
+
 open class MOLHViewController : UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,7 +185,7 @@ open class MOLH {
                resetWhenNoScenesAvailable()
             } else {
                 for scene in UIApplication.shared.connectedScenes {
-                    (scene.delegate as? MOLHResetable)?.reset()
+                    (scene.delegate as? MOLHSceneResetable)?.reset(scene: scene)
                 }
             }
         } else {
