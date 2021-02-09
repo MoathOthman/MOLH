@@ -57,4 +57,6 @@ you may check [this post](https://medium.com/@dark_torch/working-with-localizati
  * Twitter : [dark_torch](https://twitter.com/dark_torch)
  * Website: https://moathothman.com
  * Check my app PuzzPic http://apple.co/2a6Ow8W
- 
+
+# Support the library
+If you enjoy MOLH and I want to say thank you, you can (buy me a coffee)[https://www.buymeacoffee.com/moathothman]
