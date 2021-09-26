@@ -21,7 +21,7 @@ or
 ### To reset the language
 
 ```
-MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == “en” ? “ar” : “en”)
+MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
 MOLH.reset()
 ```
 
