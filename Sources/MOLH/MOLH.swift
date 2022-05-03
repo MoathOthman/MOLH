@@ -136,7 +136,7 @@ open class MOLH {
     
     /// Set Language , Language parameter string identify the language e.x. en, ar,fr ...
     open class func setLanguageTo(_ language: String) {
-        MOLHLanguage.setAppleLAnguageTo(language)
+        MOLHLanguage.setAppleLanguageTo(language)
         if MOLHLanguage.isRTLLanguage() {
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
             UIButton.appearance().semanticContentAttribute = .forceRightToLeft

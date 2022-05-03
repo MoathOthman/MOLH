@@ -6,3 +6,5 @@
   Copyright © 2016 Moath_Othman. All rights reserved.
 */
 "localize_me_please" = "لوكالايز مي";
+"stack_view_label_1" = " باعالربيStack view label one content somhow a bit longer than usual to accomodate 2 lines";
+"stack_view_label_2" = "بيStack view label two";

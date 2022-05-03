@@ -6,3 +6,5 @@
   Copyright © 2016 Moath_Othman. All rights reserved.
 */
 "localize_me_please" = "localize me please base";
+"stack_view_label_1" = "Stack view label one content somhow a bit longer than usual to accomodate 2 lines";
+"stack_view_label_2" = "Stack view label two";

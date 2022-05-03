@@ -45,8 +45,8 @@ open class MOLHLanguage {
         return current
     }
     
-    /// set @lang to be the first in AppleLanguages list
-    public class func setAppleLAnguageTo(_ lang: String) {
+    /// set @lang to be the first in AppleLanguages list, note this method does not switch the language currently, u still need to restart the app, use MOLH.setLanguageTo instead
+    public class func setAppleLanguageTo(_ lang: String) {
         let userDefaults = UserDefaults.standard
         userDefaults.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userDefaults.synchronize()

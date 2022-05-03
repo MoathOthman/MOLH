@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC15335321F39E440048AB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC15335521F39E440048AB78 /* Main.storyboard */; };
+		EC1F34662821477F00C0286B /* StackViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F34652821477F00C0286B /* StackViewTestViewController.swift */; };
 		EC48F76D238186500095E588 /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F768238186500095E588 /* MOLHFontLocalizableViews.swift */; };
 		EC48F76E238186500095E588 /* MOLHFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F769238186500095E588 /* MOLHFont.swift */; };
 		EC48F76F238186500095E588 /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F76A238186500095E588 /* MOLH.swift */; };
@@ -26,6 +27,7 @@
 		EC15335821F39E790048AB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC15335A21F39E7C0048AB78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EC15335B21F39E810048AB78 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		EC1F34652821477F00C0286B /* StackViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewTestViewController.swift; sourceTree = "<group>"; };
 		EC3E86B9226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Main.strings"; sourceTree = "<group>"; };
 		EC3E86BA226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		EC3E86BB226F1AB200EDE6EE /* agq-CM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "agq-CM"; path = "agq-CM.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				EC9594B71F29EC63006984E0 /* MOLH */,
 				EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */,
 				EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */,
+				EC1F34652821477F00C0286B /* StackViewTestViewController.swift */,
 				ECE2F0C221FB72AC009D506D /* MOLH.podspec */,
 				ECE534941EE2237300EBB394 /* Localizable.strings */,
 				EC15335521F39E440048AB78 /* Main.storyboard */,
@@ -205,6 +208,7 @@
 				EC48F76E238186500095E588 /* MOLHFont.swift in Sources */,
 				EC48F76F238186500095E588 /* MOLH.swift in Sources */,
 				EC5B8FEE1EE0ECA4003BE809 /* ViewController.swift in Sources */,
+				EC1F34662821477F00C0286B /* StackViewTestViewController.swift in Sources */,
 				EC48F76D238186500095E588 /* MOLHFontLocalizableViews.swift in Sources */,
 				EC48F771238186500095E588 /* MOLHLanguage.swift in Sources */,
 				EC5B8FEC1EE0ECA4003BE809 /* AppDelegate.swift in Sources */,
