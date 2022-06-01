@@ -13,13 +13,13 @@ private let APPLE_LANGUAGE_KEY = "AppleLanguages"
 private let MOLHFirstTimeLanguage = "plhfirsttimelanguage"
 /**
  **MOLHLanguage** is responsible for getting and setting the language.
-    - fetch current language without locale
-    - get current language with locale
-    - set current language
-    - set default language
-    - check if current language is RTL
-    - check if current language is Arabic
-    - check if a text has english chars
+ - fetch current language without locale
+ - get current language with locale
+ - set current language
+ - set default language
+ - check if current language is RTL
+ - check if current language is Arabic
+ - check if a text has english chars
  
  @auther Moath Othman
  */
@@ -117,7 +117,14 @@ open class MOLHLanguage {
         return !RTLLanguages.filter{language == $0}.isEmpty
     }
     
-    private static let RTLLanguages = ["ar", "fa", "he", "ckb-IQ","ckb-IR", "ur", "ckb"]
+    private static let RTLLanguages = ["ar",
+                                       "fa",
+                                       "he",
+                                       "ckb-IQ",
+                                       "ckb-IR",
+                                       "ur",
+                                       "ckb",
+                                       "ku"]
     
     private static var preferredLanguage: [String] {
         let userDefaults = UserDefaults.standard
