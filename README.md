@@ -14,6 +14,8 @@ When you start the app
 
 `MOLH.shared.activate(true)` 
 
+**Make sure this method is called only once and not on every reset**
+
 or 
 
 `MOLH.shared.activate(false)` to not use swizzling and use subclassing from MOLH* UI classes.
@@ -52,6 +54,8 @@ Thanks to [didats](https://github.com/didats)
 
 you may check [this post](https://medium.com/@dark_torch/working-with-localization-in-swift-part-2-e7c8a660eb2a).
 
+### uilabel/uitextfield are not reflecting
+make sure to set the tag and make sure the .activate method is only called once and not on every reset
 
 # Author 
  * Twitter : [dark_torch](https://twitter.com/dark_torch)
