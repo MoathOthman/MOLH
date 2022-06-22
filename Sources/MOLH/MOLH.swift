@@ -4,8 +4,6 @@
 import Foundation
 import UIKit
 
-let viewkey = UnsafePointer<Any>(bitPattern: 64)
-
 protocol LayoutSwizzlable: NSObjectProtocol {
     func handleSwitching(forceSwitchingRegardlessOfTag: Bool)
 }
@@ -79,7 +77,6 @@ open class MOLHView : UIView {
         if self is MOLHFontable {
             (self as! MOLHFontable).updateFont()
         }
-        
     }
 }
 
@@ -124,7 +121,7 @@ open class MOLH {
     open func activate(_ swizzleExtensions: Bool = false) {
         swizzle(class: Bundle.self, sel: #selector(Bundle.localizedString(forKey:value:table:)), override: #selector(Bundle.specialLocalizedStringForKey(_:value:table:)))
         swizzle(class:UIApplication.self, sel: #selector(getter: UIApplication.userInterfaceLayoutDirection), override: #selector(getter: UIApplication.cstm_userInterfaceLayoutDirection))
-
+        
         if swizzleExtensions {
             swizzle(class:UIViewController.self, sel: #selector(UIViewController.viewDidLayoutSubviews), override: #selector(UIViewController.mirroringviewDidLoad))
             swizzle(class:UIControl.self, sel: #selector(UIControl.awakeFromNib), override: #selector(UIControl.cstmlayoutSubviews))
@@ -182,7 +179,7 @@ open class MOLH {
         
         if #available(iOS 13.0, *) {
             if let window = UIApplication.shared.delegate?.window, window != nil {
-               resetWhenNoScenesAvailable()
+                resetWhenNoScenesAvailable()
             } else {
                 for scene in UIApplication.shared.connectedScenes {
                     (scene.delegate as? MOLHSceneResetable)?.reset(scene: scene)
@@ -211,7 +208,6 @@ extension Bundle {
         // check if its the main bundle then if the bundle of the current language is available
         // then try without locale
         // if not go back to base
-        
         let translate =  { (tableName: String?) -> String in
             let currentLanguage = MOLHLanguage.currentLocaleIdentifier() // with locale
             let languageWithoutLocale = MOLHLanguage.currentAppleLanguage() // without locale
@@ -343,14 +339,14 @@ extension UITextField: TextViewType {
 }
 
 extension UITextView: TextViewType {
-    @objc public  func cstmlayoutSubviews() {
+    @objc public func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         handleSwitching(forceSwitchingRegardlessOfTag: false)
     }
 }
 
 extension UILabel: TextViewType {
-    @objc public  func cstmlayoutSubviews() {
+    @objc public func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         handleSwitching(forceSwitchingRegardlessOfTag: false)
     }
