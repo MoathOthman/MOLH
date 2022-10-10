@@ -29,8 +29,14 @@ open class MOLHLanguage {
     /// get current Apple language
     public class func currentAppleLanguage() -> String {
         let current = preferredLanguage.first!
+        
         if let hyphenIndex = current.firstIndex(of: "-") {
-            return String(current[..<hyphenIndex])
+            if current.lowercased() == "ckb-ir" {
+                // we cant remove "_etc" to prevent select some languages bug EX: "ckb-ir"
+                return current
+            } else {
+                return String(current[..<hyphenIndex])
+            }
         } else {
             return current
         }
