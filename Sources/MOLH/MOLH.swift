@@ -4,15 +4,15 @@
 import Foundation
 import UIKit
 
-protocol LayoutSwizzlable: NSObjectProtocol {
+protocol LayoutSwizzlable: AnyObject {
     func handleSwitching(forceSwitchingRegardlessOfTag: Bool)
 }
 
-protocol Taggable: NSObjectProtocol {
+protocol Taggable: AnyObject {
     var tag: Int {get set}
 }
 
-protocol TextAlignmented: NSObjectProtocol {
+protocol TextAlignmented: AnyObject {
     var textAlignment: NSTextAlignment {get set}
 }
 
