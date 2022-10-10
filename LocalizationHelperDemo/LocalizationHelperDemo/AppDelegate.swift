@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable {
         MOLHFont.shared.arabic = UIFont(name: "Courier", size: 13)!
         MOLHLanguage.setDefaultLanguage("ar")
         MOLH.shared.activate(true)
+        
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
         reset()
         return true

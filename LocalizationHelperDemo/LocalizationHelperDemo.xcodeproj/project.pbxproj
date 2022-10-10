@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC07B15428491341009C9FCE /* InformationTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC07B15328491341009C9FCE /* InformationTextView.xib */; };
 		EC15335321F39E440048AB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC15335521F39E440048AB78 /* Main.storyboard */; };
 		EC1F34662821477F00C0286B /* StackViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F34652821477F00C0286B /* StackViewTestViewController.swift */; };
 		EC48F76D238186500095E588 /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48F768238186500095E588 /* MOLHFontLocalizableViews.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC07B15328491341009C9FCE /* InformationTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTextView.xib; sourceTree = "<group>"; };
 		EC15335821F39E790048AB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC15335A21F39E7C0048AB78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EC15335B21F39E810048AB78 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				EC9594B71F29EC63006984E0 /* MOLH */,
 				EC5B8FEB1EE0ECA4003BE809 /* AppDelegate.swift */,
 				EC5B8FED1EE0ECA4003BE809 /* ViewController.swift */,
+				EC07B15328491341009C9FCE /* InformationTextView.xib */,
 				EC1F34652821477F00C0286B /* StackViewTestViewController.swift */,
 				ECE2F0C221FB72AC009D506D /* MOLH.podspec */,
 				ECE534941EE2237300EBB394 /* Localizable.strings */,
@@ -194,6 +197,7 @@
 				EC5B8FF61EE0ECA4003BE809 /* LaunchScreen.storyboard in Resources */,
 				ECE534981EE226F300EBB394 /* arrow-right.png in Resources */,
 				EC5B8FF31EE0ECA4003BE809 /* Assets.xcassets in Resources */,
+				EC07B15428491341009C9FCE /* InformationTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

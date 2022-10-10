@@ -109,7 +109,7 @@ extension UIViewController {
     }
 }
 
-final class TextView: UITextField {
+final class TextView: MOLHTextField {
     //    private var preferredTextInputModePrimaryLanguage: String? = "en"
     //
     //    /**
